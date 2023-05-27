@@ -1,0 +1,15 @@
+body{
+    overflow-x: hidden;
+    margin: 20px;
+}
+img{
+    object-fit: cover;
+    width: 180px;
+    height: 180px;
+}
+.row{
+    padding: 10px;
+}
+h6{
+    padding-bottom: 15px;
+}
