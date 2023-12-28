@@ -17,17 +17,17 @@
     <div class="row">
         <div class="col-6">
             {% for cafe in cafes %}
-            <div class="row">
-                <div class="col-4">
-                    <img src="{{cafe.img_url}}" alt="jakiś obrazek :)">
-                </div>
-                <div class="col-8">
-                    <a href="{{ url_for('cafe', cafe_id=cafe.id) }}" style="text-decoration: none;">
+            <a href="{{ url_for('cafe', cafe_id=cafe.id) }}" style="text-decoration: none;">
+                <div class="row cafe-img-name">
+                    <div class="col-3">
+                        <img src="{{cafe.img_url}}" class="img-fluid" style="object-fit: cover; width: 200px; height: 150px;" alt="Restaurant Photo">
+                    </div>
+                    <div class="col-9">
                         <h5>{{cafe.name}}</h5>
                         <p><i class="fa-solid fa-location-dot"></i> {{cafe.location}}</p>
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
         <div class="col-6">
